@@ -35,12 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set up the initial preview
   setTimeout(updatePreview, 500); // Give editor time to initialize
 
-  // Set up event listeners once editor is ready
-  const codeEditor = getEditor();
-  if (codeEditor) {
-    codeEditor.on('change', debounce(updatePreview, 300));
-  }
-
   // Set up apply button
   const applyButton = document.getElementById('apply-button');
   if (applyButton) {
