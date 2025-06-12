@@ -49,11 +49,17 @@ h1::after {
     display: flex;
     flex-direction: column;
     background: #fffaf4; /* Slightly different vanilla shade for contrast */
+    
 }
 
 .CodeMirror {
-    flex: 1;
-    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 93% !important;
+    width: 100%;
     background-color: #fffbf7 !important; /* Warm white background */
     color: #664444 !important; /* Warm brown text */
     font-size: 15px;
@@ -68,9 +74,8 @@ h1::after {
 
 #code-editor {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(135deg, #fff9f2, #fff5f7); /* Subtle gradient */
+    position: relative;
+    /* Remove overflow: auto from here since CodeMirror handles scrolling */
 }
 
 #container {
@@ -213,3 +218,64 @@ h1::after {
     border-bottom-right-radius: 25px;
     /* Creates a decorative frosting-like border at the bottom */
 }
+
+#apply-button {
+    background: linear-gradient(45deg, #e64e66, #ff7088);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 4px 0 #d44d5c;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+#apply-button::before {
+    content: "🧁";
+    margin-right: 8px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
+}
+
+#apply-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d44d5c;
+    background: linear-gradient(45deg, #ff7088, #ff8fa3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+.editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling at container level */
+}
+
+.snippet-menu {
+    flex-shrink: 0;
+}
+
+#code-editor {
+    flex: 1;
+    position: relative;
+    /* Remove overflow: auto from here since CodeMirror handles scrolling */
+}
+
+/* CodeMirror styles are defined above */

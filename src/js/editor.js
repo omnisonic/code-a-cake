@@ -10,64 +10,55 @@ document.addEventListener('DOMContentLoaded', () => {
   value: `<!DOCTYPE html>
 <html>
 <head>
-    <title>Test Page</title>
+    <title>Code-a-Cake Editor</title>
     <style>
         body { 
-            background: #f0f0f0;
             padding: 20px;
+            font-family: Arial, sans-serif;
         }
-        h1 { 
-            color: blue;
-        }
+
+        /* Add your cake styles here! */
+        
+  .cake {
+   padding: 10px;
+   border-radius: 5px;
+  }
+
     </style>
 </head>
 <body>
-    <h1>Test Header</h1>
-    <p>If you can see this with styling, the editor is working!</p>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
+    <h1>Welcome to Code-a-Cake!</h1>
+    <p>Add cake styles in the style section and use them in your HTML!</p>
+    
+ <div class="cake chocolate">
+
+    </div>
 </body>
 </html>`
 });
 
 // Debounce function to limit preview updates
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+// function debounce(func, wait) {
+//     let timeout;
+//     return function executedFunction(...args) {
+//         const later = () => {
+//             clearTimeout(timeout);
+//             func(...args);
+//         };
+//         clearTimeout(timeout);
+//         timeout = setTimeout(later, wait);
+//     };
+// }
 
-// Add editor change handler
-codeEditor.on('change', debounce(() => updatePreview(codeEditor), 300));
+// Remove or comment out the automatic change handler
+// codeEditor.on('change', debounce(() => updatePreview(codeEditor), 300));
 
-// Initialize event listeners for tag snippets
-document.querySelectorAll('.dropdown-content a').forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const tagKey = e.target.dataset.tag;
-        if (tagSnippets[tagKey]) {
-            // Get cursor position
-            const cursor = codeEditor.getCursor();
-            // Insert the snippet at cursor position
-            codeEditor.replaceRange(tagSnippets[tagKey], cursor);
-        }
-    });
-});
+// Apply button handler (already exists)
+// const applyButton = document.getElementById('apply-button');
+// applyButton.addEventListener('click', () => updatePreview(codeEditor));
 
-// Apply button handler
-const applyButton = document.getElementById('apply-button');
-applyButton.addEventListener('click', () => updatePreview(codeEditor));
-
-// Initial preview
-updatePreview(codeEditor);
+// Initial preview (keep this to show initial content)
+// updatePreview(codeEditor);
 
 }); // End of DOMContentLoaded
 

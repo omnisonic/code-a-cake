@@ -1,5 +1,20 @@
 import { getEditor } from './editor.js';
 
+// Import confetti from CDN
+const confettiScript = document.createElement('script');
+confettiScript.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js';
+document.head.appendChild(confettiScript);
+
+function triggerConfetti() {
+  if (window.confetti) {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+}
+
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -38,7 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set up apply button
   const applyButton = document.getElementById('apply-button');
   if (applyButton) {
-    applyButton.addEventListener('click', updatePreview);
+    applyButton.addEventListener('click', () => {
+      updatePreview();
+      triggerConfetti();
+    });
   }
 });
 

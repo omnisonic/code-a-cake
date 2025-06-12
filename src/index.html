@@ -8,28 +8,8 @@
 <body>
     <div id="container">
         <div class="editor">
-            <div class="snippet-menu">
-                <div class="dropdown">
-                    <button class="dropbtn">Basic Tags</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-tag="heading"><code>&lt;h1&gt;&lt;/h1&gt;</code> Heading</a>
-                        <a href="#" data-tag="paragraph"><code>&lt;p&gt;&lt;/p&gt;</code> Paragraph</a>
-                        <a href="#" data-tag="list"><code>&lt;ul&gt;&lt;/ul&gt;</code> List</a>
-                        <a href="#" data-tag="link"><code>&lt;a&gt;&lt;/a&gt;</code> Link</a>
-                        <a href="#" data-tag="image"><code>&lt;img&gt;</code> Image</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Container Tags</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-tag="div">Div</a>
-                        <a href="#" data-tag="section">Section</a>
-                        <a href="#" data-tag="article">Article</a>
-                        <a href="#" data-tag="span">Span</a>
-                    </div>
-                </div>
-            </div>
-            <button id="apply-button">Apply</button>
+            <div id="menu-container"></div>
+            <button id="apply-button">Bake</button>
             <div id="code-editor"></div>
         </div>
         <div class="preview">
@@ -40,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/htmlmixed/htmlmixed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/xml/xml.js"></script>
+    <script src="js/menu.js" type="module"></script>
     <script src="js/snippets.js" type="module"></script>
     <script src="js/preview.js" type="module"></script>
     <script src="js/editor.js" type="module"></script>
