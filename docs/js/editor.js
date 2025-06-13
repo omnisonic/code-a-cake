@@ -15,14 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
         body { 
             padding: 20px;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Add your cake styles here! */
         
   .cake {
-   padding: 10px;
+  	   width: 300px;
+       height: 300px;
+  }      
+  .layer {
+   padding: 20px;
    border-radius: 5px;
-   width: 100px;
+
+ 
   }
     .chocolate {
       background-color: #704214;
@@ -54,11 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
     <h1>Welcome to Code-a-Cake!</h1>
     <p>Add cake styles in the style section and use them in your HTML!</p>
     
- <div class="cake chocolate"></div>
-  <div class="cake vanilla"></div>
-  <div class="cake strawberry"></div>
-  <div class="cake rainbow"></div>
-  <div class="cake chocolate polkadot"></div>
+  <div class="cake">
+  <div class="layer vanilla"></div>
+  <div class="layer strawberry"></div>
+  <div class="layer rainbow"></div>
+  <div class="layer chocolate polkadot"></div>
+  </div>
+                                      
   
 </body>
 </html>`

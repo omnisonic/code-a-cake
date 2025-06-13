@@ -16,6 +16,8 @@ const tagSnippets = {
   'section': '<section>\n    <h2>Section Title</h2>\n    <p>Section content</p>\n</section>',
   'article': '<article>\n    <h2>Article Title</h2>\n    <p>Article content</p>\n</article>',
   'span': '<span>Inline text</span>',
+  
+  // Cake Styles
   'cake-chocolate': `
     .chocolate {
       background-color: #704214;
@@ -38,10 +40,38 @@ const tagSnippets = {
     }`,
   'cake-polkadot': `
     .polkadot {
-      background-color: transparent;
-      background-image: radial-gradient(circle at center, #ff69b4 10px, transparent 11px);
-      background-size: 40px 40px;
-      color: #000;
+      background-color: none;
+      background-image: radial-gradient(circle at center, #ff69b4 5px, transparent 5px);
+      background-size: 30px 30px;
+    }`,
+  'cake-stripes': `
+    .stripes {
+      background: repeating-linear-gradient(45deg, #ff6b6b 0px, #ff6b6b 10px, transparent 10px, transparent 20px);
+    }`,
+  'cake-sparkles': `
+    .sparkles {
+      background-image: radial-gradient(circle at 30% 30%, gold 1px, transparent 3px),
+                       radial-gradient(circle at 70% 60%, gold 1px, transparent 3px),
+                       radial-gradient(circle at 40% 80%, gold 1px, transparent 3px);
+      background-color: #ffb5e8;
+    }`,
+  'cake-zigzag': `
+    .zigzag {
+      background: linear-gradient(135deg, #43c6ac 25%, transparent 25%) -10px 0,
+                 linear-gradient(225deg, #43c6ac 25%, transparent 25%) -10px 0,
+                 linear-gradient(315deg, #43c6ac 25%, transparent 25%),
+                 linear-gradient(45deg, #43c6ac 25%, transparent 25%);
+      background-size: 20px 20px;
+      background-color: #96e4df;
+    }`,
+  'cake-confetti': `
+    .confetti {
+      background-image: 
+        radial-gradient(circle at 10% 20%, #ff6b6b 2px, transparent 2px),
+        radial-gradient(circle at 80% 30%, #4ecdc4 3px, transparent 3px),
+        radial-gradient(circle at 40% 70%, #ffe66d 2px, transparent 2px),
+        radial-gradient(circle at 70% 90%, #ff6b6b 3px, transparent 3px);
+      background-color: #fff;
     }`
 };
 
