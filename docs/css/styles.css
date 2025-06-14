@@ -279,3 +279,31 @@ body {
 }
 
 /* CodeMirror styles are defined above */
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.button-container button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    background: #ff9eaf;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 3px 0 #ff7c91;
+}
+
+.button-container button:hover {
+    background: #ff7c91;
+    transform: translateY(-2px);
+}
+
+.button-container button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #ff7c91;
+}

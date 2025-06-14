@@ -46,6 +46,39 @@ function updatePreview() {
   }
 }
 
+function getFormattedContent() {
+    const codeEditor = getEditor();
+    if (!codeEditor) return '';
+    
+    const content = codeEditor.getValue();
+    return content; // The content is already HTML, so we return it as is
+}
+
+function downloadHtml() {
+    const htmlContent = getFormattedContent();
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'code-a-cake.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function previewInTab() {
+    const htmlContent = getFormattedContent();
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    
+    window.open(url, '_blank');
+    
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Set up the initial preview
   setTimeout(updatePreview, 500); // Give editor time to initialize
@@ -58,6 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
       triggerConfetti();
     });
   }
+  
+  // Set up download and preview buttons
+  document.getElementById('downloadButton').addEventListener('click', downloadHtml);
+  document.getElementById('previewButton').addEventListener('click', previewInTab);
 });
 
 // Initial preview update
