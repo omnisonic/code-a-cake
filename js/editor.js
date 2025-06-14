@@ -15,6 +15,12 @@ const defaultTemplate = `<!DOCTYPE html>
             align-items: center;
         }
 
+        /* Emoji style to ensure proper rendering */
+        .emoji {
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-style: normal;
+        }
+
         /* These are your cake styling classes! Mix and match them to create your masterpiece! */
         
         .cake {
@@ -63,7 +69,7 @@ const defaultTemplate = `<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <h1>🧁 Welcome to CODE ME A CAKE PLEASE! 🎂</h1>
+    <h1><span class="emoji">\u{1F9C1}</span> Welcome to CODE ME A CAKE PLEASE! <span class="emoji">\u{1F382}</span></h1>
     
     <div class="instructions">
         <h2>How to Create Your Cake:</h2>
@@ -78,7 +84,7 @@ const defaultTemplate = `<!DOCTYPE html>
             <li>Click the "Preview in Tab" button to see your creation in a new tab!</li>
             <li>Click the "Clear All" button to start over!</li>
         </ol>
-        <span class="tip">💡 This is for intermediate students that already know some html and css.  I recommend FreeCodeCamp's Responsive Web Design!</span>
+        <span class="tip"><span class="emoji">\u{1F4A1}</span> This is for intermediate students that already know some html and css.  I recommend FreeCodeCamp's Responsive Web Design!</span>
     </div>
     <h2> THESE ARE THE LAYERS OF YOUR CAKE SO FAR!</h2>
     <div class="cake">
@@ -89,7 +95,7 @@ const defaultTemplate = `<!DOCTYPE html>
         <div class="layer vanilla polkadot"></div>
     </div>
     
-    <p class="tip">💡 Tip: Use the menu buttons above to add more layers and styles!</p>
+    <p class="tip"><span class="emoji">\u{1F4A1}</span> Tip: Use the menu buttons above to add more layers and styles!</p>
 </body>
 </html>`;
 

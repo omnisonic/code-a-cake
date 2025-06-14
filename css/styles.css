@@ -22,7 +22,7 @@ h1 {
 }
 
 h1::after {
-    content: "🧁";
+    content: "\1F9C1";  /* Unicode for cupcake emoji */
     position: absolute;
     right: -40px;
     top: 50%;
@@ -113,7 +113,7 @@ h1::after {
 }
 
 .dropbtn::before {
-    content: "🍰";
+    content: "\1F370";  /* Unicode for cake emoji */
     margin-right: 8px;
     filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
 }
@@ -157,7 +157,7 @@ h1::after {
 }
 
 .dropdown-content a::before {
-    content: "🧁";
+    content: "\1F9C1";  /* Unicode for cupcake emoji */
     margin-right: 8px;
     font-size: 1.2em;
     opacity: 0;
@@ -237,7 +237,7 @@ h1::after {
 }
 
 #apply-button::before {
-    content: "🧁";
+    content: "\1F9C1";  /* Unicode for cupcake emoji */
     margin-right: 8px;
     filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
 }
