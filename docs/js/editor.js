@@ -5,7 +5,7 @@ let codeEditor;
 const defaultTemplate = `<!DOCTYPE html>
 <html>
 <head>
-    <title>Code-a-Cake Editor</title>
+    <title>CODE ME A CAKE PLEASE!</title>
     <style>
         body { 
             padding: 20px;
@@ -15,56 +15,80 @@ const defaultTemplate = `<!DOCTYPE html>
             align-items: center;
         }
 
-        /* Add your cake styles here! */
+        /* These are your cake styling classes! Mix and match them to create your masterpiece! */
         
-  .cake {
-  	   width: 300px;
-       height: 300px;
-  }      
-  .layer {
-   padding: 20px;
-   border-radius: 5px;
+        .cake {
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }      
+        
+        .layer {
+            padding: 30px;
+            margin: 5px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
 
- 
-  }
-    .chocolate {
-      background-color: #704214;
-      color: #fff;
-      height:50px;
-    }
-    .vanilla {
-      background-color: #f3e5ab;
-      color: #000;
-    }
-    .strawberry {
-      background-color: #f9c7ca;
-      color: #000;
-    }
-    .rainbow {
-      background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      color: #fff;
-    }
-    .polkadot {
-      background-color: none;
-      background-image: radial-gradient(circle at center, #ff69b4 5px, transparent 5px);
-      background-size: 30px 30px;
-
-    }
-
+        .layer:hover {
+            transform: translateX(10px);
+        }
+        
+        /* Delicious cake flavors and decorations below! */
+        .chocolate {
+            background-color: #704214;
+            color: #fff;
+        }
+        
+        .vanilla {
+            background-color: #f3e5ab;
+            color: #000;
+        }
+        
+        .strawberry {
+            background-color: #f9c7ca;
+            color: #000;
+        }
+        
+        .rainbow {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            color: #fff;
+        }
+        
+        .polkadot {
+            background-color: none;
+            background-image: radial-gradient(circle at center, #ff69b4 5px, transparent 5px);
+            background-size: 30px 30px;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Code-a-Cake!</h1>
-    <p>Add cake styles in the style section and use them in your HTML!</p>
+    <h1>🧁 Welcome to CODE ME A CAKE PLEASE! 🎂</h1>
     
-  <div class="cake">
-  <div class="layer vanilla"></div>
-  <div class="layer strawberry"></div>
-  <div class="layer rainbow"></div>
-  <div class="layer chocolate polkadot"></div>
-  </div>
-                                      
-  
+    <div class="instructions">
+        <h2>How to Create Your Cake:</h2>
+        <ol>
+        <li>Use the editor to write HTML code for your cake layers. Everthing on this side of the screen is made from the code editor side.</li>
+            <li>Each cake layer uses the class "layer" plus a flavor class (like "chocolate" or "vanilla")</li>
+            <li>Add decoration classes like "polkadot" or "rainbow" for extra flair</li>
+            <li>Click the "Bake" button to see your changes come to life!</li>
+            <li>Try hovering over the layers to see them wiggle!</li>
+            <li> Go futher by editing the CSS and HTML to create your own unique cake design!</li>
+            <li>Click the "Download HTML" button to save your creation!</li>
+            <li>Click the "Preview in Tab" button to see your creation in a new tab!</li>
+            <li>Click the "Clear All" button to start over!</li>
+        </ol>
+    </div>
+    <h2> THESE ARE THE LAYERS OF YOUR CAKE SO FAR!</h2>
+    <div class="cake">
+        <!-- Try changing the classes below to create your own cake design! -->
+        <div class="layer vanilla"></div>
+        <div class="layer strawberry rainbow"></div>
+        <div class="layer chocolate"></div>
+        <div class="layer vanilla polkadot"></div>
+    </div>
+    
+    <p class="tip">💡 Tip: Use the menu buttons above to add more layers and styles!</p>
 </body>
 </html>`;
 
