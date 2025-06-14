@@ -78,6 +78,7 @@ const defaultTemplate = `<!DOCTYPE html>
             <li>Click the "Preview in Tab" button to see your creation in a new tab!</li>
             <li>Click the "Clear All" button to start over!</li>
         </ol>
+        <span class="tip">💡 This is for intermediate students that already know some html and css.  I recommend FreeCodeCamp's Responsive Web Design!</span>
     </div>
     <h2> THESE ARE THE LAYERS OF YOUR CAKE SO FAR!</h2>
     <div class="cake">
