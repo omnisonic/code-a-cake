@@ -1,13 +1,8 @@
 // Initialize CodeMirror editor
 let codeEditor;
 
-// Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', () => {
-    codeEditor = CodeMirror(document.getElementById('code-editor'), {
-  mode: 'htmlmixed',
-  theme: 'default',
-  lineNumbers: true,
-  value: `<!DOCTYPE html>
+// Default template content
+const defaultTemplate = `<!DOCTYPE html>
 <html>
 <head>
     <title>Code-a-Cake Editor</title>
@@ -71,7 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
                                       
   
 </body>
-</html>`
+</html>`;
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
+    codeEditor = CodeMirror(document.getElementById('code-editor'), {
+  mode: 'htmlmixed',
+  theme: 'default',
+  lineNumbers: true,
+  value: defaultTemplate
 });
 
 // Debounce function to limit preview updates
@@ -95,7 +98,32 @@ document.addEventListener('DOMContentLoaded', () => {
 // applyButton.addEventListener('click', () => updatePreview(codeEditor));
 
 // Initial preview (keep this to show initial content)
-// updatePreview(codeEditor);
+// updatePreview(codeEditor);    // Add clear and restore button functionality
+    const clearButton = document.getElementById('clearButton');
+    const restoreButton = document.getElementById('restoreButton');
+
+    clearButton.addEventListener('click', () => {
+        if (confirm('Are you sure you want to clear the editor? This will remove all content.')) {
+            codeEditor.setValue(`<!DOCTYPE html>
+<html>
+<head>
+    <title>Code-a-Cake Editor</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <!-- Add your content here -->
+</body>
+</html>`);
+        }
+    });
+
+    restoreButton.addEventListener('click', () => {
+        if (confirm('Are you sure you want to restore the default template? This will replace the current content.')) {
+            codeEditor.setValue(defaultTemplate);
+        }
+    });
 
 }); // End of DOMContentLoaded
 

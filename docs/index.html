@@ -9,13 +9,21 @@
     <div id="container">
         <div class="editor">
             <div id="menu-container"></div>
+            <div class="button-container editor-buttons">
+                <button id="clearButton">Clear</button>
+                <button id="restoreButton">Restore Template</button>
+            </div>
             <div id="code-editor"></div>
         </div>
         <div class="preview">
-            <div class="button-container">
-                <button id="apply-button">Bake</button>
-                <button id="downloadButton">Download HTML</button>
-                <button id="previewButton">Preview in Tab</button>
+            <div class="button-container preview-buttons">
+                <div class="button-row">
+                    <button id="apply-button">Bake</button>
+                </div>
+                <div class="button-row">
+                    <button id="downloadButton">Download HTML</button>
+                    <button id="previewButton">Preview in Tab</button>
+                </div>
             </div>
             <iframe id="html-output" sandbox="allow-same-origin"></iframe>
         </div>

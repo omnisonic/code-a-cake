@@ -307,3 +307,83 @@ body {
     transform: translateY(1px);
     box-shadow: 0 1px 0 #ff7c91;
 }
+
+.editor-buttons {
+    margin-bottom: 10px;
+}
+
+.editor-buttons button {
+    background: linear-gradient(45deg, #e64e66, #ff7088);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.editor-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.editor-buttons button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.preview-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.button-row:first-child button {
+    width: 100%;
+}
+
+.button-row:not(:first-child) {
+    justify-content: space-between;
+}
+
+.button-row:not(:first-child) button {
+    flex: 1;
+}
+
+/* Apply styles to all buttons in the preview section */
+.preview-buttons button {
+    background: linear-gradient(45deg, #e64e66, #ff7088);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.preview-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.preview-buttons button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Make the Bake button stand out more */
+#apply-button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+}
