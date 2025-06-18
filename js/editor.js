@@ -162,3 +162,31 @@ document.addEventListener('DOMContentLoaded', () => {
 export function getEditor() {
     return codeEditor;
 }
+
+// Function to format HTML
+function formatHTML() {
+    let code = codeEditor.getValue();
+
+    // Format HTML
+    code = html_beautify(code, {
+        indent_size: 4,
+        wrap_attributes: 'force-aligned'
+    });
+
+    // Format CSS within <style> tags
+    const styleRegex = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+    code = code.replace(styleRegex, (match, css) => {
+        const formattedCSS = css_beautify(css, {
+            indent_size: 4
+        });
+        return `<style>\n${formattedCSS}\n</style>`;
+    });
+
+    codeEditor.setValue(code);
+}
+
+// Add event listener to the format button
+document.addEventListener('DOMContentLoaded', () => {
+    const formatButton = document.getElementById('formatButton');
+    formatButton.addEventListener('click', formatHTML);
+});
