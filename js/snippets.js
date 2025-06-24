@@ -16,6 +16,14 @@ const tagSnippets = {
   'section': '<section>\n    <h2>Section Title</h2>\n    <p>Section content</p>\n</section>',
   'article': '<article>\n    <h2>Article Title</h2>\n    <p>Article content</p>\n</article>',
   'span': '<span>Inline text</span>',
+  'candle-row-container': `
+      .candle-row-container {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          gap: 10px;
+          margin-top: 20px;
+      }`,
   
   // Cake Styles
   'cake-chocolate': `
@@ -72,6 +80,110 @@ const tagSnippets = {
         radial-gradient(circle at 40% 70%, #ffe66d 2px, transparent 2px),
         radial-gradient(circle at 70% 90%, #ff6b6b 3px, transparent 3px);
       background-color: #fff;
+    }`,
+  // Candle Styles
+  'candle-basic': `
+    .candle-basic {
+      width: 10px;
+      height: 40px;
+      background-color: #f0e68c; /* Khaki */
+      border-radius: 2px;
+      position: relative;
+      margin: 5px;
+    }
+    .candle-basic::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 8px;
+      background-color: #8b4513; /* SaddleBrown */
+      border-radius: 1px;
+    }
+    .candle-basic::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 6px solid orange;
+    }`,
+  'candle-striped': `
+    .candle-striped {
+      width: 12px;
+      height: 50px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #ff69b4, /* Hot Pink */
+        #ff69b4 10px,
+        #fff 10px,
+        #fff 20px
+      );
+      border-radius: 3px;
+      position: relative;
+      margin: 5px;
+    }
+    .candle-striped::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 10px;
+      background-color: #a0522d; /* Sienna */
+      border-radius: 1px;
+    }
+    .candle-striped::after {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 8px solid yellow;
+    }`,
+  'candle-fancy': `
+    .candle-fancy {
+      width: 15px;
+      height: 60px;
+      background-color: #add8e6; /* LightBlue */
+      border-radius: 7px / 3px; /* Oval top and bottom */
+      position: relative;
+      margin: 5px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .candle-fancy::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 12px;
+      background-color: #696969; /* DimGray */
+      border-radius: 2px;
+    }
+    .candle-fancy::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 10px solid gold;
     }`
 };
 
